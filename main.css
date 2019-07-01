@@ -3,6 +3,7 @@
 html, body, h1, h2, h3, p, ul, li {
   margin: 0;
   padding: 0;
+  font-size: 100%;
 }
 
 /*********** END CSS RESET ********************/
@@ -11,10 +12,100 @@ html, body {
   height: 100%;
 }
 
+
 body {
-  background-image: url('/images/fp_1200px.jpg');
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: stretch;
+  background-color: #000;
+  color: #fff;
+  font-size: 28px;
+  font-family: 'Ropa Sans', sans-serif;
+}
+
+@media screen and (max-width: 1200px) {
+  body {
+    font-size: 5vw;      
+  }
+}
+
+
+.logo {
+  background-image: url('/images/fp_logo_web.jpg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
   background-color: black;
+  min-height: 500px;
+}
+
+.item {
+  /*border: 1px solid red;*/
+  /*min-height: 100px;*/
+  margin-bottom: 1em;
+  text-align: center;
+}
+
+.top {
+  flex: 1 auto;
+}
+
+.logo {
+  flex: 3 auto;
+}
+
+.signup {
+  flex: 2 auto;
+  font-size: 1em;
+}
+
+.signup p {
+  padding: 0.5em;
+}
+
+
+/******************************
+***** Mailchimp stylez ********
+*******************************/
+
+form { 
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: center;
+  /*border: 2px solid red;*/
+  max-width: 800px;
+  padding: 0.5em;
+  font-size: 1em;
+  margin: 0 auto;
+}
+
+input {
+  font-size: 1em;
+  padding: 0.2em 0.4em;  
+  font-family: 'Ropa Sans', sans-serif;
+}
+
+input[type=email] {
+  border: 2px solid #94bdff; /*#042d90*/
+  flex: 5 auto;
+  width: 100px;
+  margin-right: 1em;
+  background-color: #205af8;
+  color: white;
+}
+
+input[type=email]::placeholder {
+  color: #94bdff;
+}
+
+input[type=submit] {
+  border: 2px solid #ffabae; /*#5e0609;*/
+  color: #fff;
+  flex: 1 auto;
+  cursor: pointer;
+  background-color: #f91220;
 }
