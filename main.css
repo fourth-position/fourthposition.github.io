@@ -30,6 +30,12 @@ body {
   }
 }
 
+.item {
+  /*border: 1px solid red;*/
+  /*min-height: 100px;*/
+  margin-bottom: 1em;
+  text-align: center;
+}
 
 .logo {
   background-image: url('/images/fp_logo_web.jpg');
@@ -38,13 +44,16 @@ body {
   background-size: contain;
   background-color: black;
   min-height: 500px;
+  margin-bottom: 0;
 }
 
-.item {
-  /*border: 1px solid red;*/
-  /*min-height: 100px;*/
-  margin-bottom: 1em;
-  text-align: center;
+.collage {
+  background-image: url('/images/fp-collage.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  background-color: black;
+  min-height: 300px;
 }
 
 .top {
